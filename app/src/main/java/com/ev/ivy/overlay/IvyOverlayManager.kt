@@ -117,16 +117,16 @@ class IvyOverlayManager(
         }
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.S) {
             try {
-                params.setBlurBehindRadius(dpToPx(settings.state.value.blurRadiusDp.toFloat()))
+                params.setBlurBehindRadius(dpToPx(settings.state.value.blurRadiusDp))
             } catch (_: Exception) {
             }
         }
         return params
     }
 
-    private fun dpToPx(dp: Float): Float = TypedValue.applyDimension(
+    private fun dpToPx(dp: Int): Int = TypedValue.applyDimension(
         TypedValue.COMPLEX_UNIT_DIP,
-        dp,
+        dp.toFloat(),
         appContext.resources.displayMetrics
-    )
+    ).toInt()
 }

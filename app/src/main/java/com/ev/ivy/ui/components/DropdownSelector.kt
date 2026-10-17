@@ -1,4 +1,4 @@
-package com.ev.ivy.ui
+package com.ev.ivy.ui.components
 
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxWidth
